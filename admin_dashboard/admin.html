@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Local</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-container">
+        <h1><i class="fas fa-cogs"></i> Music Admin Dashboard (Local)</h1>
+        
+        <div class="admin-section">
+            <h2><i class="fas fa-folder-plus"></i> Create New Folder</h2>
+            <div class="form-group">
+                <input type="text" id="folderName" placeholder="Enter folder name">
+                <button onclick="createFolder()">Create Folder</button>
+            </div>
+        </div>
+        
+        <div class="admin-section">
+            <h2><i class="fas fa-music"></i> Add Song from YouTube</h2>
+            <div class="form-group">
+                <input type="text" id="youtubeUrl" placeholder="YouTube URL">
+                <select id="songFolder">
+                    <option value="">Select Folder</option>
+                </select>
+                <div class="bitrate-options">
+                    <label><input type="checkbox" name="bitrate" value="64k" checked> 64kbps</label>
+                    <label><input type="checkbox" name="bitrate" value="128k"> 128kbps</label>
+                </div>
+                <button onclick="addSong()">Add Song</button>
+            </div>
+            <div id="uploadProgress" class="progress-container" style="display: none;">
+                <div class="progress-bar" id="progressBar"></div>
+                <div id="progressText">Processing...</div>
+            </div>
+        </div>
+        
+        <div class="admin-section">
+            <h2><i class="fas fa-list"></i> Existing Songs</h2>
+            <div class="songs-list" id="songsList">
+                Loading...
+            </div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

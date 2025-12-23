@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="mobile-container">
+        <!-- Header -->
+        <header class="app-header">
+            <h1><i class="fas fa-music"></i> StreamMusic</h1>
+            <div class="bitrate-selector">
+                <select id="bitrateSelect">
+                    <option value="64">64kbps</option>
+                    <option value="128">128kbps</option>
+                </select>
+            </div>
+        </header>
+
+        <!-- Now Playing -->
+        <div class="now-playing">
+            <div class="album-art" id="currentArt">
+                <img src="https://img.youtube.com/vi/default/mqdefault.jpg" alt="Album Art">
+            </div>
+            <div class="song-info">
+                <h2 id="currentTitle">Select a song</h2>
+                <p id="currentArtist">--</p>
+            </div>
+        </div>
+
+        <!-- Player Controls -->
+        <div class="player-controls">
+            <button id="prevBtn"><i class="fas fa-step-backward"></i></button>
+            <button id="playBtn"><i class="fas fa-play"></i></button>
+            <button id="nextBtn"><i class="fas fa-step-forward"></i></button>
+            <input type="range" id="progressBar" value="0" max="100">
+            <div class="time-display">
+                <span id="currentTime">0:00</span> / <span id="totalTime">0:00</span>
+            </div>
+        </div>
+
+        <!-- Song List -->
+        <div class="song-list-container">
+            <h3><i class="fas fa-list"></i> Available Songs</h3>
+            <div class="folder-tabs" id="folderTabs">
+                <!-- Dynamically loaded -->
+            </div>
+            <div class="song-list" id="songList">
+                <!-- Songs load here -->
+            </div>
+        </div>
+
+        <!-- Audio Element -->
+        <audio id="audioPlayer" preload="metadata"></audio>
+    </div>
+
+    <!-- Supabase & App Scripts -->
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+</body>
+</html>
