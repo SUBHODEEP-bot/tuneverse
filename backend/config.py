@@ -5,8 +5,8 @@ load_dotenv()
 
 class Config:
     # Supabase Configuration
-    SUPABASE_URL = os.getenv('SUPABASE_URL', 'https://supabase.com/dashboard/project/xpvbscqujtieokbzluzos')
-    SUPABASE_KEY = os.getenv('SUPABASE_SERVICE_KEY', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhwdmJzY3F1anRpZW9rYnpsdXpvIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2NjQ3OTQ1NywiZXhwIjoyMDgyMDU1NDU3fQ.VU4oq_OGL-D1epOLMvsA4yinwQlumw8ucR9SUjhXUfc')
+    SUPABASE_URL = os.getenv('SUPABASE_URL', 'https://supabase.com/dashboard/project/xpvbscqujtieokbzluzos.supabase.co')
+    SUPABASE_KEY = os.getenv('SUPABASE_SERVICE_KEY', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhwdmJzY3F1anRpZW9rYnpsdXpvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjY0Nzk0NTcsImV4cCI6MjA4MjA1NTQ1N30.p190eJx5mTAY-nrEag5iFOA2hdfH_BLpjfkS6UWv-qk')
     
     # Storage Configuration
     AUDIO_STORAGE_BUCKET = 'music_audio'
