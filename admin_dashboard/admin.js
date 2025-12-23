@@ -1,6 +1,6 @@
 // Configuration
 const API_BASE_URL = 'http://localhost:5000';
-const ADMIN_SECRET_KEY = 'your-secret-admin-key-local-only'; // Change this!
+const ADMIN_SECRET_KEY = 'anything-secret'; // Change this!
 
 // DOM Elements
 const songsListEl = document.getElementById('songsList');
